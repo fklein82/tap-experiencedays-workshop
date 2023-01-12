@@ -1,0 +1,28 @@
+modules:
+    workshop-overview:
+        name: Workshop Overview
+        exit_sign: TAP UI - Accelerators
+    exercises/app-accelerators:
+        name: TAP UI - Accelerators
+        exit_sign: TAP UI - Catalog
+    exercises/catalog:
+        name: TAP UI - Catalog
+        exit_sign: Supply Chain
+    exercises/supply-chain:
+        name: The supply chain
+        exit_sign: securityscanning
+    exercises/security-scanning:
+        name: TAP UI - Supply Chain Security
+        exit_sign: Where is my data?
+    exercises/where-is-my-data:
+        name: Where is my data?
+        exit_sign: VAC
+    exercises/vac-intro:
+        name: VMware Application Catalog
+        exit_sign: Service Binding
+    exercises/service-binding: 
+        name: Service Binding with the Database
+        exit_sign: Summary
+    workshop-summary:
+        name: Workshop Summary
+        exit_sign: End Workshop

@@ -1,0 +1,12 @@
+name: Markdown Sample
+modules:
+  activate:
+    - workshop-overview
+    - exercises/app-accelerators
+    - exercises/catalog
+    - exercises/supply-chain
+    - exercises/security-scanning
+    - exercises/where-is-my-data
+    - exercises/vac-intro
+    - exercises/service-binding
+    - workshop-summary

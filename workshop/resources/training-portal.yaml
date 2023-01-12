@@ -1,0 +1,40 @@
+#@ load("@ytt:data", "data")
+---
+apiVersion: learningcenter.tanzu.vmware.com/v1beta1
+kind: TrainingPortal
+metadata:
+  name: sales-workshops
+  annotations:
+    kapp.k14s.io/update-strategy: always-replace
+spec:
+  portal:
+    title: Workshops for Sales
+    registration:
+      type: one-step
+      enabled: false
+    #@ if data.values.learning_center_portal:
+    credentials:
+      admin:
+        username: admin
+        password: #@ data.values.learning_center_portal.adminPassword
+      robot:
+        username: robot-user
+        password: #@ data.values.learning_center_portal.robotPassword
+    clients:
+      robot:
+        id: #@ data.values.learning_center_portal.robotClientId
+        secret: #@ data.values.learning_center_portal.robotClientSecret
+    #@ end
+    ingress:
+        hostname: sales-workshops
+    updates:
+      workshop: true
+    sessions:
+      maximum: 40
+    reserved: 1
+  workshops:
+    - name: sales-workshop
+      capacity: 20
+      reserved: 0
+      expires: 2h
+      orphaned: 1h

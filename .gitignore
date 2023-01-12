@@ -1,0 +1,17 @@
+.DS_Store
+TODO
+values.yaml
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+*.vsix
+
+workshop/values.yaml
+workshop/tanzu-framework-linux-amd64.tar
